@@ -76,3 +76,58 @@ function testElse(val) {
     }
     return result;
   };
+
+//Switch statements can be used instead of nested if statements. 
+//Each statement needs a break or else it will execute them all if possible
+function multiTest(val){
+    switch(val){
+        case 1:
+        return "one";
+        break;
+        case 2:
+        return "two"
+        break;
+        default:
+        return "Not one or two"
+        break;
+    }
+}
+
+//Omitting breaks can be used to give multiple cases the same output
+function multiTest2(val){
+    switch(val){
+        case 1:
+        case 2:
+        return "one or two"
+        break;
+        default:
+        return "Not one or two"
+        break;
+    }
+}
+
+//A boolean statement returns true of false, so no need to add a return line
+function isEqual(a,b) {
+    return a === b;
+  }
+
+  //Function to count face cards played and decide whether to bet or hold
+  var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card){
+    case 2:case 3:case 4:case 5:case 6:
+    count +=1;
+    break;
+    case 10:case "J":case "Q":case "K":case "A":
+    count -=1;
+    break;
+  }
+  if(count>0){
+    return count + " Bet"
+  }
+  else{
+    return count + " Hold"
+  }
+}
