@@ -130,4 +130,16 @@ function cc(card) {
   else{
     return count + " Hold"
   }
-}
+};
+
+//A conditional operator is a special 1-line way to write simple if statements
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater";
+};
+
+//Conditional operators can be chained together
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+};
