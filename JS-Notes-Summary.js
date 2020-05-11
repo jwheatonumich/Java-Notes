@@ -39,6 +39,18 @@ function addCount(input){
     count+=input;
 };
 
+//A conditional operator is a special 1-line way to write simple if statements
+function findGreater(a, b) {
+    return a > b ? "a is greater" : "b is greater";
+  }
+
+//Conditional operators can be chained together
+function findGreaterOrEqual(a, b) {
+    return (a === b) ? "a and b are equal" 
+      : (a > b) ? "a is greater" 
+      : "b is greater";
+  }
+
 //Switch statements can be used instead of nested if statements. 
 //Each statement needs a break or else it will execute them all if possible
 function multiTest2(val){
@@ -63,13 +75,14 @@ var cat = {
     "enemies": ["Water", "Dogs"]
   };
 
-  //Dot notation . or bracket notation [] can extract data from an object
+//Dot notation . or bracket notation [] can extract data from an object
 var catName = cat.name;
 var catLegs = cat["number legs"]; //Bracket notation is useful when an attribute has a space
 
 //Bracket notation can use variables to extract data from an object
 var lookup = "enemies";
 catEnemies = cat[lookup];
+//*BRACKET NOTATION CAN BE USED FOR VARIABLES*
 
 //Updating a property in an object
 cat.name = "Fred";
